@@ -54,7 +54,9 @@
 npm run build:static
 ```
 
-Cloudflare PagesのGit連携では、次の値を設定します。
+Cloudflareのダッシュボードでは、**WorkersではなくPagesを選択**してGitリポジトリを連携します。このリポジトリは静的サイトであり、WorkerやPages Functionsを使用しません。**Bindingsは追加せず**、Worker向けの `wrangler deploy` も使用しないでください。
+
+Cloudflare PagesのGit連携では、次の値に統一します。
 
 | 設定 | 値 |
 | --- | --- |
@@ -63,7 +65,10 @@ Cloudflare PagesのGit連携では、次の値を設定します。
 | Framework preset | `None` |
 | Build command | `npm run build:static` |
 | Build output directory | `dist` |
-| Root directory | 未指定（リポジトリルート） |
+| Root directory | 空欄 |
+| Bindings | なし |
+
+デプロイはPagesのGit連携に任せます。`wrangler.toml`、`wrangler.json`、`wrangler.jsonc` は追加せず、`wrangler deploy` やWorker用のデプロイスクリプトも使用しません。
 
 プロジェクト名を取得できた場合の公開URLは `https://school-mvp-lab.pages.dev/` です。初回デプロイ後は、トップページ、`privacy.html`、`experiments/school-print-checker/` を実際の公開URLとスマートフォンで確認します。
 
