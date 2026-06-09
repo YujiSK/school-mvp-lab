@@ -3,427 +3,137 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>School Letter Helper | 学校プリントを、「次にやること」まで整理する</title>
-    <meta name="google-site-verification" content="uMqO7f7J6bAzj_EOIZe6L1o1uxqyiO-kegZuP6ombWA" />
+    <title>学校関連MVP実験場 | school-mvp-lab</title>
     <meta
       name="description"
-      content="School Letter Helperは、学校からの連絡やプリントを、やさしい日本語・母語訳・締切・持ち物・返信文に整理する外国人保護者・支援者向けのサービス案です。"
+      content="学校からの連絡、プリント、持ち物、提出物、欠席連絡などの困りごとから生まれた、小さな無料ツールを試す実験サイトです。"
     />
-    <meta property="og:site_name" content="School Letter Helper" />
-    <meta property="og:title" content="School Letter Helper | 学校プリントを、「次にやること」まで整理する" />
-    <meta
-      property="og:description"
-      content="学校からの連絡やプリントを、やさしい日本語・母語訳・締切・持ち物・返信文に整理する外国人保護者・支援者向けのサービス案。"
-    />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://school-letter-helper-lp.pages.dev/" />
-    <link rel="alternate" hreflang="ja" href="https://school-letter-helper-lp.pages.dev/" />
-    <link rel="alternate" hreflang="en" href="https://school-letter-helper-lp.pages.dev/en" />
-    <link rel="alternate" hreflang="pt-BR" href="https://school-letter-helper-lp.pages.dev/pt" />
-    <link rel="alternate" hreflang="x-default" href="https://school-letter-helper-lp.pages.dev/" />
-    <meta property="og:image" content="https://school-letter-helper-lp.pages.dev/ogp.png" />
-    <meta property="og:image:type" content="image/png" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:image" content="https://school-letter-helper-lp.pages.dev/ogp.png" />
     <meta name="theme-color" content="#166b72" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;800;900&family=Outfit:wght@600;700;800;900&display=swap"
-      rel="stylesheet"
-    />
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
+  <body class="lab-page">
     <header class="site-header">
-      <a class="brand" href="#top" aria-label="School Letter Helper ホーム">
-        <span class="brand-mark">SL</span>
-        <span>School Letter Helper</span>
+      <a class="brand" href="index.html" aria-label="学校関連MVP実験場 ホーム">
+        <span class="brand-mark">校</span>
+        <span>school-mvp-lab</span>
       </a>
-      <div class="header-right">
-        <nav class="site-nav" aria-label="メインナビゲーション">
-          <a href="#problems">困りごと</a>
-          <a href="#features">できること</a>
-          <a href="#preregister">ご意見・案内</a>
-          <a href="privacy.html">プライバシー</a>
-        </nav>
-        <div class="lang-switcher" aria-label="Language Selector">
-          <a href="/" class="active">日本語</a>
-          <a href="/en">English</a>
-          <a href="/pt">Português</a>
-        </div>
-      </div>
+      <nav class="site-nav" aria-label="メインナビゲーション">
+        <a href="#experiments">実験一覧</a>
+        <a href="#about">このサイトについて</a>
+        <a href="privacy.html">プライバシー</a>
+      </nav>
     </header>
 
-    <main id="top">
-      <section class="hero">
-        <div class="hero-copy">
-          <p class="eyebrow">外国人保護者と支援者のための学校連絡サポート</p>
-          <h1>
-            <span class="phrase">学校プリントを、</span>
-            <span class="phrase">「次にやること」まで</span>
-            <span class="phrase">整理する。</span>
-          </h1>
-          <p class="lead">
-            <span class="phrase">School Letter Helperは、</span>
-            <span class="phrase">学校からの連絡やプリントを</span>
-            <span class="phrase">やさしい日本語・母語訳・</span>
-            <span class="phrase">締切・持ち物・返信文に整理する、</span>
-            <span class="phrase">外国人保護者・支援者向けの</span>
-            <span class="phrase">サービス案です。</span>
+    <main id="top" class="lab-main">
+      <section class="lab-hero" aria-labelledby="hero-title">
+        <div class="lab-hero-copy">
+          <p class="eyebrow">小さく公開して、必要かどうかを確かめる</p>
+          <h1 id="hero-title">学校関連MVP実験場</h1>
+          <p class="lab-lead">
+            学校からの連絡、プリント、持ち物、提出物、欠席連絡などで困る人向けの、
+            小さな無料ツールを試す場所です。
           </p>
-          <p class="validation-note">
-            まだ開発前の需要検証段階です。「こういう支援が必要そうか」「どの機能が一番ほしいか」を知るため、率直なご意見を集めています。
+          <p>
+            外国人保護者、日本語が苦手な保護者、学校支援者、留学生・学生などの
+            「学校の情報が分かりにくい」を、1テーマ1ページで軽く検証します。
           </p>
           <div class="hero-actions">
-            <a class="button button-primary" href="#preregister">テスト版に参加する</a>
-            <a class="button button-secondary" href="#preregister">リリース通知を受け取る</a>
-          </div>
-          <p class="privacy-note">
-            テスト版では、子どもの氏名・学校名・住所などの入力は推奨しません。
-          </p>
-        </div>
-
-        <div class="hero-card" aria-label="学校プリントをアプリで整理するイメージ">
-          <div class="phone-mockup">
-            <div class="phone-status" aria-hidden="true">
-              <span></span>
-              <span></span>
-            </div>
-            <div class="scan-card">
-              <span class="tag">読み取り中</span>
-              <h2>遠足の実施について</h2>
-              <p>
-                参加承諾書を6月12日までに担任へご提出ください。なお、当日は熱中症対策のため水筒、帽子をご持参いただき、雨天の備えとして雨具をご準備願います。
-              </p>
-              <div class="scan-lines" aria-hidden="true">
-                <span></span>
-                <span></span>
-                <span></span>
-              </div>
-            </div>
-            <div class="transform-arrow" aria-hidden="true">↓</div>
-            <div class="todo-panel">
-              <div class="panel-title">
-                <span>やること</span>
-                <strong>3件</strong>
-              </div>
-              <ul class="task-list">
-                <li><span></span>締切を確認する</li>
-                <li><span></span>持ち物を準備する</li>
-                <li><span></span>先生への返信文を作る</li>
-              </ul>
-            </div>
+            <a class="button button-primary" href="#experiments">実験中のページを見る</a>
+            <a class="button button-secondary" href="#safety">利用前の注意を読む</a>
           </div>
         </div>
-      </section>
-
-      <section id="problems" class="section">
-        <div class="section-heading">
-          <p class="eyebrow">困りごと</p>
-          <h2>
-            <span class="phrase">学校の連絡は、</span>
-            <span class="phrase">読むだけでも</span>
-            <span class="phrase">負担になることがあります。</span>
-          </h2>
-        </div>
-        <div class="card-grid">
-          <article class="info-card">
-            <h3>日本語が難しい</h3>
-            <p>学校特有の言い回し、長い文章、配布物のルールがわかりにくい。</p>
-          </article>
-          <article class="info-card">
-            <h3>締切を見落としやすい</h3>
-            <p>提出日、支払い、持ち物、返信が必要な内容が文章の中に埋もれている。</p>
-          </article>
-          <article class="info-card">
-            <h3>返信の書き方に迷う</h3>
-            <p>先生に失礼なく、短く、正確に伝える日本語を考えるのが難しい。</p>
-          </article>
-        </div>
-      </section>
-
-      <section id="features" class="section section-tint">
-        <div class="section-heading">
-          <p class="eyebrow">できること</p>
-          <h2>
-            <span class="phrase">プリントの内容を、</span>
-            <span class="phrase">次の行動に整理します。</span>
-          </h2>
-        </div>
-        <div class="feature-list">
-          <div class="feature-row">
-            <span>01</span>
-            <div>
-              <h3>やさしい日本語で要約</h3>
-              <p>重要な内容を短く整理し、何をすればよいかを見つけやすくします。</p>
-            </div>
-          </div>
-          <div class="feature-row">
-            <span>02</span>
-            <div>
-              <h3>母語訳で確認</h3>
-              <p>日本語だけでは不安な保護者が、内容を母語でも確認できるようにします。</p>
-            </div>
-          </div>
-          <div class="feature-row">
-            <span>03</span>
-            <div>
-              <h3>締切・持ち物・提出物を抽出</h3>
-              <p>日付、準備物、支払い、返信が必要な内容をやることリストにします。</p>
-            </div>
-          </div>
-          <div class="feature-row">
-            <span>04</span>
-            <div>
-              <h3>返信文の下書き</h3>
-              <p>欠席、確認、相談、参加連絡などの返信文を自然な日本語で作ります。</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="how" class="section">
-        <div class="section-heading">
-          <p class="eyebrow">使い方</p>
-          <h2>
-            <span class="phrase">スマートフォンで</span>
-            <span class="phrase">学校プリントを</span>
-            <span class="phrase">読み込むだけ。</span>
-          </h2>
-        </div>
-        <ol class="steps">
-          <li>
-            <strong>プリントを撮影</strong>
-            <span>紙のプリントやPDFを読み込みます。</span>
-          </li>
-          <li>
-            <strong>内容を確認</strong>
-            <span>要約、翻訳、締切、持ち物、返信が必要な項目を確認します。</span>
-          </li>
-          <li>
-            <strong>行動に移す</strong>
-            <span>提出、準備、返信を忘れないように進めます。</span>
-          </li>
-        </ol>
-      </section>
-
-      <section id="users" class="section section-tint">
-        <div class="section-heading">
-          <p class="eyebrow">対象ユーザー</p>
-          <h2>
-            <span class="phrase">家庭と学校を</span>
-            <span class="phrase">つなぐ人のために</span>
-            <span class="phrase">作っています。</span>
-          </h2>
-        </div>
-        <div class="audience-grid">
-          <div>
-            <strong>外国人保護者</strong>
-            <p>学校連絡を母語でも確認し、必要な対応を把握したい方。</p>
-          </div>
-          <div>
-            <strong>支援者・通訳者</strong>
-            <p>複数家庭の学校連絡支援を、わかりやすく効率化したい方。</p>
-          </div>
-          <div>
-            <strong>学校・NPO関係者</strong>
-            <p>保護者への説明や連絡支援の負担を減らしたい方。</p>
-          </div>
-        </div>
-      </section>
-
-      <section id="signup" class="section signup-section">
-        <div class="signup-copy">
-          <p class="eyebrow">テスト版募集</p>
-          <h2>
-            <span class="phrase">ご意見・テスト版案内を</span>
-            <span class="phrase">受け取る</span>
-          </h2>
-          <p>
-            開発前の需要検証として、学校プリントや学校連絡で困った経験、ほしい機能、テスト版への関心を集めています。
-          </p>
-          <div class="hero-actions">
-            <a class="button button-primary" href="#preregister">テスト版に参加する</a>
-            <a class="button button-secondary" href="#preregister">リリース通知を受け取る</a>
-          </div>
-        </div>
-      </section>
-
-      <section id="preregister" class="section form-section">
-        <div class="section-heading">
-          <p class="eyebrow">事前登録フォーム</p>
-          <h2>
-            <span class="phrase">ご意見・テスト版案内を</span>
-            <span class="phrase">受け取る</span>
-          </h2>
-          <p>
-            現在、School Letter Helperは開発前の需要検証段階です。学校プリントや学校連絡で困った経験、ほしい機能、テスト版への関心を教えてください。
-          </p>
-        </div>
-
-        <form class="lead-form" action="https://formspree.io/f/xpqnkoea" method="POST">
-          <input type="hidden" name="source" value="lp_form" />
-          <input type="hidden" name="service" value="school_letter_helper" />
-          <input type="hidden" name="_subject" value="School Letter Helper 事前登録" />
-          <input class="honeypot" type="text" name="_gotcha" tabindex="-1" autocomplete="off" />
-
-          <div class="form-alert">
-            <strong>個人情報保護への配慮</strong>
-            <p>
-              いただいた内容は、初期機能の優先順位を決めるために使います。子どもの名前、学校名、住所、電話番号、クラス名、学校プリント画像などの個人情報は入力しないでください。
-            </p>
-            <a href="privacy.html">プライバシーポリシーを確認する</a>
-          </div>
-
-          <div class="form-grid">
-            <label class="field">
-              <span>あなたの立場 <em>必須</em></span>
-              <select name="role" required>
-                <option value="">選択してください</option>
-                <option value="parent">保護者</option>
-                <option value="supporter">支援者・通訳・日本語教室関係者</option>
-                <option value="teacher">先生・学校関係者</option>
-                <option value="npo">NPO・地域団体・国際交流関係者</option>
-                <option value="other">その他</option>
-              </select>
-            </label>
-
-            <label class="field">
-              <span>主に使いたい言語 <em>必須</em></span>
-              <select name="language" required>
-                <option value="">選択してください</option>
-                <option value="portuguese">ポルトガル語</option>
-                <option value="english">英語</option>
-                <option value="spanish">スペイン語</option>
-                <option value="tagalog">タガログ語</option>
-                <option value="vietnamese">ベトナム語</option>
-                <option value="easy_japanese">やさしい日本語</option>
-                <option value="other">その他</option>
-              </select>
-            </label>
-          </div>
-
-          <fieldset class="field-group">
-            <legend>学校プリントや学校連絡で困った経験はありますか？ <em>必須</em></legend>
-            <label><input type="radio" name="pain_experience" value="often" required /> よくある</label>
-            <label><input type="radio" name="pain_experience" value="sometimes" /> たまにある</label>
-            <label><input type="radio" name="pain_experience" value="rarely" /> あまりない</label>
-            <label><input type="radio" name="pain_experience" value="supporting_others" /> 自分ではなく、支援している人が困っている</label>
-          </fieldset>
-
-          <label class="field">
-            <span>一番ほしい機能 <em>必須</em></span>
-            <select name="wanted_feature" required>
-              <option value="">選択してください</option>
-              <option value="easy_japanese">学校文書をやさしい日本語にする</option>
-              <option value="translation">母語に翻訳する</option>
-              <option value="todo_extraction">やること・締切・持ち物を整理する</option>
-              <option value="reply_template">先生への返信文を作る</option>
-              <option value="deadline_reminder">締切を忘れないようにする</option>
-              <option value="other">その他</option>
-            </select>
-          </label>
-
-          <fieldset class="field-group">
-            <legend>テスト版に参加したいですか？ <em>必須</em></legend>
-            <label><input type="radio" name="beta_interest" value="yes" required /> 参加したい</label>
-            <label><input type="radio" name="beta_interest" value="maybe" /> 内容を見てから考えたい</label>
-            <label><input type="radio" name="beta_interest" value="notify_only" /> リリース通知だけ受け取りたい</label>
-          </fieldset>
-
-          <label class="field">
-            <span>連絡用メールアドレス <em>必須</em></span>
-            <input type="email" name="email" autocomplete="email" required />
-            <small>テスト版案内・リリース通知・追加ヒアリングの連絡に使用します。</small>
-          </label>
-
-          <label class="field">
-            <span>困っていること・ほしい機能があれば教えてください</span>
-            <textarea
-              name="message"
-              rows="5"
-              placeholder="例：プリントの締切が分かりにくい、先生にどう返信すればいいか不安、など"
-            ></textarea>
-            <small>子どもの名前、学校名、住所、電話番号などは書かないでください。</small>
-          </label>
-
-          <button class="button button-primary form-submit" type="submit">
-            ご意見・テスト版案内を送る
-          </button>
-        </form>
-      </section>
-
-      <section id="privacy" class="section">
-        <div class="section-heading">
-          <p class="eyebrow">個人情報への配慮</p>
-          <h2>
-            <span class="phrase">最初から、</span>
-            <span class="phrase">集めすぎない設計を</span>
-            <span class="phrase">大切にします。</span>
-          </h2>
-        </div>
-        <div class="privacy-box">
-          <p>
-            事前登録フォームでは、メールアドレス、立場、使いたい言語、困っていることなど、案内と改善に必要な範囲だけを聞きます。
-          </p>
-          <ul>
-            <li>子どもの氏名、学校名、住所、電話番号、クラス名、出席番号の入力は推奨しません。</li>
-            <li>学校プリント画像や個人情報を直接送るフォームにはしません。</li>
-            <li>取得した情報を第三者に販売しません。</li>
-            <li>削除依頼に対応します。</li>
+        <aside class="lab-status" aria-label="このサイトの方針">
+          <span class="status-badge">無料・小規模テスト中</span>
+          <h2>完成品ではなく、需要を確かめる場所です</h2>
+          <ul class="check-list">
+            <li>まずは静的な1ページで公開</li>
+            <li>フォームや反応を見て改善</li>
+            <li>必要性が分かってから機能を追加</li>
           </ul>
+        </aside>
+      </section>
+
+      <section id="experiments" class="lab-section" aria-labelledby="experiments-title">
+        <div class="section-heading compact-heading">
+          <p class="eyebrow">Experiments</p>
+          <h2 id="experiments-title">実験中の小さなツール</h2>
+          <p>小さく使える試作と、次に検証するアイデアを公開しています。学校プリント重要点チェッカーは今すぐブラウザで試せます。</p>
+        </div>
+
+        <div class="experiment-grid">
+          <article class="experiment-card">
+            <span class="card-number">01</span>
+            <h3>学校プリント重要点チェッカー</h3>
+            <p>文章を貼り付けると、日時・場所・持ち物・提出物・お金・返信・保護者がすることをブラウザ内で整理します。</p>
+            <a class="card-link" href="experiments/school-print-checker/">今すぐ試す <span aria-hidden="true">→</span></a>
+          </article>
+
+          <article class="experiment-card">
+            <span class="card-number">02</span>
+            <h3>欠席・遅刻連絡メーカー</h3>
+            <p>状況を選び、先生へ送る自然で簡潔な日本語の連絡文を作る想定のツールです。</p>
+            <a class="card-link" href="experiments/absence-message-maker/">実験ページを見る <span aria-hidden="true">→</span></a>
+          </article>
+
+          <article class="experiment-card">
+            <span class="card-number">03</span>
+            <h3>学校用語やさしい日本語辞典</h3>
+            <p>PTA、懇談会、集金、提出期限、持ち物など、学校特有の言葉をやさしく説明します。</p>
+            <a class="card-link" href="experiments/school-terms-dictionary/">実験ページを見る <span aria-hidden="true">→</span></a>
+          </article>
+
+          <article class="experiment-card">
+            <span class="card-number">04</span>
+            <h3>学校行事持ち物チェックリスト</h3>
+            <p>遠足、運動会、授業参観など、学校行事ごとの準備物を見落とさないよう整理します。</p>
+            <a class="card-link" href="experiments/event-items-checklist/">実験ページを見る <span aria-hidden="true">→</span></a>
+          </article>
         </div>
       </section>
 
-      <section id="faq" class="section section-tint">
-        <div class="section-heading">
-          <p class="eyebrow">FAQ</p>
-          <h2>よくある質問</h2>
+      <section id="about" class="lab-section lab-section-tint" aria-labelledby="about-title">
+        <div class="two-column">
+          <div>
+            <p class="eyebrow">About this lab</p>
+            <h2 id="about-title">反応を見ながら、必要なものだけ育てます</h2>
+          </div>
+          <div>
+            <p>
+              このサイトは、完成された大規模サービスを先に作るのではなく、学校生活の
+              「困りごとあるある」から小さなページを切り出し、無料で公開する実験サイトです。
+            </p>
+            <p>
+              フォーム送信や具体的な相談などの反応を見て、役立つ可能性があるテーマを改善します。
+              反応がないテーマは止めることもあります。
+            </p>
+          </div>
         </div>
-        <div class="faq-list">
-          <details>
-            <summary>どの言語に対応する予定ですか？</summary>
-            <p>最初はニーズの多い言語から検証します。事前登録フォームで使いたい言語を教えてください。</p>
-          </details>
-          <details>
-            <summary>学校名や子どもの名前を入力する必要はありますか？</summary>
-            <p>ありません。テスト版では、子どもの氏名、学校名、住所、電話番号、クラス名、出席番号などの入力を推奨しません。</p>
-          </details>
-          <details>
-            <summary>支援者や先生も登録できますか？</summary>
-            <p>登録できます。保護者支援、学校連絡、NPO活動での利用を想定しています。</p>
-          </details>
-          <details>
-            <summary>正式リリース日は決まっていますか？</summary>
-            <p>未定です。テスト版の参加者からのフィードバックをもとに改善しながら公開準備を進めます。</p>
-          </details>
+      </section>
+
+      <section id="safety" class="lab-section" aria-labelledby="safety-title">
+        <div class="notice-box">
+          <p class="eyebrow">利用前にご確認ください</p>
+          <h2 id="safety-title">個人情報と大切な判断について</h2>
+          <ul>
+            <li>名前、住所、電話番号、学校名、児童生徒名などの個人情報は、できるだけ隠して利用してください。</li>
+            <li>このサイトは、学校・自治体・教育委員会の公式サービスではありません。</li>
+            <li>内容の最終確認は、必ず学校からの案内や先生への確認によって行ってください。</li>
+            <li>医療、法律、進路などの重要な判断を、このサイトだけで行わないでください。</li>
+          </ul>
+          <p><a href="privacy.html">プライバシーポリシーを読む</a></p>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
       <div>
-        <strong>School Letter Helper</strong>
-        <p>学校プリントを、「次にやること」まで整理する。</p>
+        <strong>school-mvp-lab</strong>
+        <p>学校の困りごとを、小さく試す実験場。</p>
       </div>
       <nav aria-label="フッターナビゲーション">
-        <a href="#preregister">ご意見・案内</a>
-        <a href="privacy.html">プライバシーポリシー</a>
+        <a href="#experiments">実験一覧</a>
+        <a href="privacy.html">プライバシー</a>
       </nav>
     </footer>
-
-    <script>
-      document.querySelectorAll('a[href^="#"]').forEach((link) => {
-        link.addEventListener("click", (event) => {
-          const target = document.querySelector(link.getAttribute("href"));
-          if (!target) return;
-          event.preventDefault();
-          target.scrollIntoView({ behavior: "smooth", block: "start" });
-        });
-      });
-    </script>
   </body>
 </html>

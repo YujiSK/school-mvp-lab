@@ -1,4 +1,6 @@
-https://school-letter-helper-lp.pages.dev/
-https://school-letter-helper-lp.pages.dev/en
-https://school-letter-helper-lp.pages.dev/pt
-https://school-letter-helper-lp.pages.dev/privacy
+https://school-mvp-lab.pages.dev/
+https://school-mvp-lab.pages.dev/experiments/school-print-checker/
+https://school-mvp-lab.pages.dev/experiments/absence-message-maker/
+https://school-mvp-lab.pages.dev/experiments/school-terms-dictionary/
+https://school-mvp-lab.pages.dev/experiments/event-items-checklist/
+https://school-mvp-lab.pages.dev/privacy.html

@@ -3,109 +3,88 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>プライバシーポリシー | School Letter Helper</title>
-    <meta
-      name="description"
-      content="School Letter Helperの簡易プライバシーポリシー。事前登録フォームで取得する情報、利用目的、入力を推奨しない情報、削除依頼について説明します。"
-    />
-    <meta property="og:title" content="プライバシーポリシー | School Letter Helper" />
-    <meta
-      property="og:description"
-      content="School Letter Helperの個人情報の取り扱いについて。"
-    />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://school-letter-helper-lp.pages.dev/privacy.html" />
+    <title>プライバシーポリシー | 学校関連MVP実験場</title>
+    <meta name="description" content="school-mvp-labでのブラウザ内処理、個人情報、外部フォーム、学校関連情報の取り扱い方針です。" />
     <meta name="theme-color" content="#166b72" />
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
+  <body class="lab-page">
     <header class="site-header">
-      <a class="brand" href="index.html" aria-label="School Letter Helper ホーム">
-        <span class="brand-mark">SL</span>
-        <span>School Letter Helper</span>
+      <a class="brand" href="index.html" aria-label="学校関連MVP実験場 ホーム">
+        <span class="brand-mark">校</span><span>school-mvp-lab</span>
       </a>
       <nav class="site-nav" aria-label="メインナビゲーション">
-        <a href="index.html#preregister">事前登録</a>
-        <a href="privacy.html">プライバシー</a>
+        <a href="index.html#experiments">実験一覧</a><a href="privacy.html" aria-current="page">プライバシー</a>
       </nav>
     </header>
 
-    <main class="policy-page">
+    <main class="policy-page lab-policy-page">
       <section class="policy-hero">
         <p class="eyebrow">Privacy Policy</p>
         <h1>プライバシーポリシー</h1>
-        <p>制定日：2026年5月27日</p>
+        <p>最終更新日：2026年6月8日</p>
       </section>
 
       <section class="policy-content">
-        <h2>1. 事前登録フォームで取得する情報</h2>
+        <h2>1. このサイトについて</h2>
         <p>
-          School Letter Helperは、テスト版の案内、リリース通知、サービス改善、追加ヒアリングの連絡のために、事前登録フォームを設置します。
-          フォームでは、立場、使用希望言語、学校プリントや学校連絡での困りごと、希望機能、テスト版参加希望、メールアドレス、自由記述を取得する場合があります。
+          school-mvp-lab（以下「当サイト」）は、学校関連の小さなWebページを無料で公開し、需要を検証するための実験サイトです。
+          学校、自治体、教育委員会その他の公的機関が提供する公式サービスではありません。
         </p>
 
-        <h2>2. 利用目的</h2>
+        <h2>2. 学校プリント重要点チェッカーの入力内容</h2>
         <p>
-          取得した情報は、テスト版の案内、リリース通知、サービス改善、追加ヒアリングの連絡、重要なお知らせの送付に限定して利用します。
-          送信された内容を目的外に利用しません。
+          学校プリント重要点チェッカーに入力した文章と画面に表示される結果は、利用者のブラウザ内JavaScriptだけで処理します。
+          当サイトのサーバーや外部APIへ送信せず、Cookie、LocalStorage、データベースなどにも保存しません。AI API、OCR、画像アップロードも使用しません。
+          「役に立った／微妙」のボタンも現在は画面表示だけの仮UIであり、回答を送信・保存しません。
         </p>
 
-        <h2>3. 入力を推奨しない情報</h2>
+        <h2>3. 取得する可能性がある情報</h2>
         <p>
-          フォームでは、子どもの氏名、学校名、住所、電話番号、クラス名、出席番号、学校プリント画像、健康情報、家庭の詳しい事情など、
-          個人を特定しやすい情報や慎重な取り扱いが必要な情報の入力を推奨しません。
+          各実験ページに外部フォームを設置した場合、利用者の立場、困りごと、希望機能、自由記述、連絡先などを取得することがあります。
+          取得項目、利用目的、外部サービス名は、フォームを公開する際に分かりやすく案内します。フォームを使う実験では、公開前にそのページ上で送信先と取り扱いを案内します。
         </p>
 
-        <h2>4. 学校プリント画像の扱い</h2>
+        <h2>4. 個人情報を入力しないためのお願い</h2>
         <p>
-          現在の事前登録フォームでは、学校プリント画像やファイルのアップロード項目を設けません。
-          将来、画像を保存または解析する機能を提供する場合は、保存の有無、利用目的、保存期間、削除方法を事前に明示します。
+          名前、住所、電話番号、メールアドレス、学校名、クラス、出席番号、児童生徒名など、個人を特定できる情報は、できるだけ削除または隠して利用してください。
+          学校プリントや連絡文には個人情報が含まれやすいため、ブラウザ内だけで処理する機能であっても、不要な個人情報は削除または伏せてから入力してください。外部フォームへは原文をそのまま貼り付けたり送信したりしないでください。
         </p>
 
-        <h2>5. 外部フォームサービス</h2>
+        <h2>5. 利用目的</h2>
         <p>
-          事前登録フォームの送信には、初期検証として外部フォームサービスのFormspreeを利用する予定です。
-          送信時にはFormspreeのプライバシーポリシーや利用規約も適用される場合があります。
+          フォームなどを通じて取得した情報は、需要の把握、実験ページの改善、テスト案内、必要な連絡のために利用します。
+          法令に基づく場合を除き、取得した個人情報を本人の同意なく販売または目的外で第三者へ提供しません。
         </p>
 
-        <h2>6. 第三者提供</h2>
+        <h2>6. 外部フォームサービス</h2>
         <p>
-          法令に基づく場合を除き、取得した個人情報を本人の同意なく第三者に販売または提供しません。
+          検証にはGoogle Formsなどの外部フォームサービスを利用する場合があります。その場合、送信された情報には各サービス提供者の利用規約やプライバシーポリシーも適用されます。
+          外部フォームの利用先が決まった段階で、各実験ページに案内を追加します。
         </p>
 
-        <h2>7. 安全管理</h2>
+        <h2>7. 保存期間と削除</h2>
         <p>
-          取得した情報について、不正アクセス、紛失、漏えい、改ざんを防ぐため、合理的な範囲で安全管理に努めます。
+          取得した情報は、需要検証や案内に必要な期間だけ保持し、不要になった情報は合理的な方法で削除します。
+          削除依頼などの問い合わせ導線は、実際のフォーム公開時にフォーム内またはトップページで案内します。未設定の連絡先を当サイト上に推測して掲載することはありません。
         </p>
 
-        <h2>8. 削除依頼</h2>
+        <h2>8. 免責と最終確認</h2>
         <p>
-          登録情報の確認、修正、削除を希望する場合は、問い合わせ先までご連絡ください。合理的な範囲で速やかに対応します。
+          当サイトの内容は正確性や完全性を保証するものではありません。学校からの案内、提出期限、金額、持ち物、連絡方法などは、必ず元の文書や先生への確認によって最終確認してください。
+          医療、法律、進路などの重要な判断を、当サイトの情報だけで行わないでください。
         </p>
 
-        <h2>9. 変更</h2>
-        <p>
-          本ポリシーは、必要に応じて変更することがあります。重要な変更がある場合は、本サイト上でわかりやすく告知します。
-        </p>
-
-        <h2>10. 問い合わせ先</h2>
-        <p>
-          登録情報の確認、修正、削除に関するお問い合わせは、
-          <a href="index.html#preregister">事前登録フォーム</a>
-          からご連絡ください。個人情報を含む学校プリント画像や、子どもの氏名、学校名、住所などは送信しないでください。
-        </p>
+        <h2>9. ポリシーの変更</h2>
+        <p>実験内容や利用する外部サービスの変更に応じて、本ポリシーを更新することがあります。重要な変更は当サイト上で案内します。</p>
       </section>
+
+      <p class="back-link"><a href="index.html">← トップページへ戻る</a></p>
     </main>
 
     <footer class="site-footer">
-      <div>
-        <strong>School Letter Helper</strong>
-        <p>学校プリントを、やることリストに変える。</p>
-      </div>
-      <nav aria-label="フッターナビゲーション">
-        <a href="index.html">トップページ</a>
-        <a href="index.html#preregister">事前登録</a>
-      </nav>
+      <div><strong>school-mvp-lab</strong><p>学校の困りごとを、小さく試す実験場。</p></div>
+      <nav aria-label="フッターナビゲーション"><a href="index.html">トップページ</a><a href="index.html#experiments">実験一覧</a></nav>
     </footer>
   </body>
 </html>

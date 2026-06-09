@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>学校プリント重要点チェッカー | 学校関連MVP実験場</title>
+    <meta
+      name="description"
+      content="学校プリントの文章をブラウザ内で簡易分析し、日時・場所・持ち物・提出物・お金・返信・保護者がすることを整理します。"
+    />
+    <meta name="theme-color" content="#166b72" />
+    <link rel="stylesheet" href="../../style.css" />
+    <script src="checker.js" defer></script>
+  </head>
+  <body class="lab-page experiment-page">
+    <header class="site-header">
+      <a class="brand" href="../../index.html" aria-label="学校関連MVP実験場 ホーム">
+        <span class="brand-mark">校</span>
+        <span>school-mvp-lab</span>
+      </a>
+      <nav class="site-nav" aria-label="メインナビゲーション">
+        <a href="../../index.html#experiments">実験一覧</a>
+        <a href="../../privacy.html">プライバシー</a>
+      </nav>
+    </header>
+
+    <main class="experiment-main checker-main">
+      <nav class="breadcrumb" aria-label="パンくずリスト">
+        <a href="../../index.html">学校関連MVP実験場</a>
+        <span aria-hidden="true">/</span>
+        <span>学校プリント重要点チェッカー</span>
+      </nav>
+
+      <article>
+        <header class="experiment-hero checker-hero">
+          <span class="status-badge status-badge-live">無料テスト公開中</span>
+          <h1>学校プリント<br />重要点チェッカー</h1>
+          <p class="lab-lead">文章を貼り付けると、重要そうな箇所をブラウザ内ですぐに整理します。</p>
+          <ul class="privacy-points" aria-label="データの取り扱い">
+            <li>外部送信なし</li>
+            <li>入力内容を保存しない</li>
+            <li>AI・OCR不使用</li>
+          </ul>
+        </header>
+
+        <div class="checker-layout">
+          <section class="checker-tool" aria-labelledby="checker-title">
+            <div class="checker-tool-heading">
+              <div>
+                <p class="eyebrow">Try it now</p>
+                <h2 id="checker-title">プリントの文章を貼り付ける</h2>
+              </div>
+              <button class="text-button" id="sample-button" type="button">サンプルを入れる</button>
+            </div>
+
+            <form id="checker-form">
+              <label class="checker-label" for="letter-text">
+                学校プリントの文章
+                <span>名前、学校名、住所、電話番号などは削除してください。</span>
+              </label>
+              <textarea
+                id="letter-text"
+                name="letter-text"
+                rows="12"
+                maxlength="10000"
+                placeholder="例：遠足のお知らせ&#10;日時：6月18日（水）午前8時30分集合&#10;集合場所：学校の正門&#10;持ち物：弁当、水筒、雨具&#10;参加申込書を6月10日までに担任へ提出してください。"
+                required
+              ></textarea>
+              <div class="checker-form-footer">
+                <span id="character-count" aria-live="polite">0 / 10,000文字</span>
+                <div class="checker-actions">
+                  <button class="button button-secondary checker-clear" id="clear-button" type="button">消去する</button>
+                  <button class="button button-primary" type="submit">重要点を整理する</button>
+                </div>
+              </div>
+              <p class="local-processing-note">
+                この処理は、このページを開いているブラウザ内だけで行います。入力内容や結果をサーバーへ送信・保存しません。
+              </p>
+            </form>
+          </section>
+
+          <section class="checker-results" id="checker-results" aria-labelledby="results-title" hidden>
+            <div class="results-heading">
+              <div>
+                <p class="eyebrow">Check result</p>
+                <h2 id="results-title">簡易チェック結果</h2>
+              </div>
+              <span class="result-count" id="result-count"></span>
+            </div>
+
+            <p class="result-summary" id="result-summary" aria-live="polite"></p>
+            <div class="result-grid" id="result-grid"></div>
+
+            <div class="result-warning" role="note">
+              <strong>必ず元のプリントでも確認してください</strong>
+              <p>キーワードを使った簡易抽出のため、誤りや見落としがあります。特に日時、金額、締切、提出先は原文を優先してください。</p>
+            </div>
+
+            <div class="feedback-panel" id="feedback-panel">
+              <div>
+                <strong>この結果は役に立ちましたか？</strong>
+                <p>現在は画面上の仮UIです。回答は送信・保存されません。</p>
+              </div>
+              <div class="feedback-actions" aria-label="結果へのフィードバック">
+                <button type="button" data-feedback="helpful">役に立った</button>
+                <button type="button" data-feedback="not-helpful">微妙</button>
+              </div>
+              <p class="feedback-message" id="feedback-message" role="status"></p>
+            </div>
+          </section>
+        </div>
+
+        <div class="experiment-content checker-information">
+          <section aria-labelledby="about-checker-title">
+            <p class="eyebrow">この実験について</p>
+            <h2 id="about-checker-title">できること・まだできないこと</h2>
+            <p>
+              日付や時刻、場所、持ち物、提出、お金、返信、保護者の対応に関係する表現をJavaScriptで探し、該当する文を分類します。
+              文脈を理解するAIではないため、言い換えや複雑な文章は正しく分類できないことがあります。
+            </p>
+          </section>
+
+          <section class="notice-box" aria-labelledby="notice-title">
+            <p class="eyebrow">注意書き</p>
+            <h2 id="notice-title">利用前に必ず確認してください</h2>
+            <ul>
+              <li>名前、住所、電話番号、学校名、児童生徒名などの個人情報は、できるだけ隠して利用してください。</li>
+              <li>このサイトは、学校・自治体・教育委員会の公式サービスではありません。</li>
+              <li>最終確認は、必ず学校からの案内や先生への確認によって行ってください。</li>
+              <li>医療、法律、進路などの重要な判断を、このサイトだけで行わないでください。</li>
+            </ul>
+            <p><a href="../../privacy.html">プライバシーポリシーを読む</a></p>
+          </section>
+        </div>
+      </article>
+
+      <p class="back-link"><a href="../../index.html">← トップページへ戻る</a></p>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <strong>school-mvp-lab</strong>
+        <p>学校の困りごとを、小さく試す実験場。</p>
+      </div>
+      <nav aria-label="フッターナビゲーション">
+        <a href="../../index.html">トップページ</a>
+        <a href="../../privacy.html">プライバシー</a>
+      </nav>
+    </footer>
+  </body>
+</html>
