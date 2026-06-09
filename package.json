@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "test:checker": "node --test experiments/school-print-checker/checker.test.cjs",
+    "build:static": "node scripts/build-static.mjs"
   },
   "dependencies": {
     "next": "16.2.6",
